@@ -1,3 +1,12 @@
+#fecha-clasificacion {
+  position: absolute;
+  top: 200px; /* Ajusta según sea necesario para alinear con tu imagen */
+  left: 1080px; /* Ajusta para posicionar correctamente */
+  font-size: 26px;
+  color: #4CAF50; /* Un verde para coincidir con tus especificaciones */
+}
+
+
 body {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     margin: 0;
