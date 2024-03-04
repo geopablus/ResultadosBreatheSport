@@ -1,34 +1,62 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #000; /* Fondo negro como en la imagen de la bufanda */
+    color: #fff; /* Texto en blanco para contraste */
 }
 
 h1 {
-    color: #333;
+    color: #4CAF50; /* Un verde para los títulos, ajustar según la imagen */
 }
 
 table {
-    width: 100%;
+    width: 75%;
     margin-bottom: 20px;
     border-collapse: collapse;
+    background-color: #111; /* Un fondo oscuro para las tablas */
 }
 
 table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
+    border: 1px solid #444; /* Bordes más claros que el fondo de la tabla */
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333; /* Un gris oscuro para el fondo del encabezado */
+    color: #4CAF50; /* Usar el verde para el texto del encabezado */
+}
+
+td {
+    color: #ddd; /* Gris claro para el texto de las celdas */
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #222; /* Alternar colores para las filas */
+}
+
+/* Estilos para el encabezado de la tabla */
+th {
+    padding: 10px 15px;
+    width: 10%; /* Ajustar el ancho de las columnas */
+    text-align: center; /* Centrar el contenido de los encabezados */
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+    padding: 8px;
+    text-align: center; /* Centrar el contenido de las celdas */
+}
+
+/* Estilos para hacer que las tablas sean responsivas */
+@media screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Añadir un salto de línea después del primer espacio en los nombres de las columnas */
+th::after {
+    content: "\A";
+    white-space: pre;
 }

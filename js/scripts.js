@@ -5,7 +5,7 @@ function cargarMostrarDatos(nombreCategoria) {
             const contenedor = document.getElementById(nombreCategoria);
             let tabla = '<table>';
             // Añade aquí los encabezados de tu tabla
-            tabla += '<tr><th>Nombre del Equipo</th><th>Puntos</th>...</tr>';
+            tabla += '<tr><th>Nombre del equipo</th><th>Puntos</th><th>Partidos jugados</th><th>Partidos ganados</th><th>Partidos empatados</th><th>Partidos perdidos</th><th>Goles a favor</th><th>Goles en contra</th></tr>';
             datos.forEach(item => {
                 tabla += `<tr>
                             <td>${item.Nombre_equipo}</td>
