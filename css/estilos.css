@@ -1,61 +1,57 @@
 #fecha-clasificacion {
-  top: 200px; /* Ajusta según sea necesario para alinear con tu imagen */
-  left: 1080px; /* Ajusta para posicionar correctamente */
-  font-size: 26px;
-  color: #4CAF50; /* Un verde para coincidir con tus especificaciones */
+    position: absolute;
+    top: 20px;
+    right: 0;
+    transform: translateX(-470%);
+    background-color: transparent;
+    color: #4CAF50;
+    padding: 10px;
 }
-
 
 body {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #000; /* Fondo negro como en la imagen de la bufanda */
-    color: #fff; /* Texto en blanco para contraste */
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
 }
 
-h1 {
-    color: #4CAF50; /* Un verde para los títulos, ajustar según la imagen */
-}
+h1 {color: #4CAF50;}
 
 table {
-    width: 75%;
+    width: 50%;
+    margin: 5;
     margin-bottom: 20px;
     border-collapse: collapse;
-    background-color: #111; /* Un fondo oscuro para las tablas */
+    background-color: #111;
 }
 
 table, th, td {
-    border: 1px solid #444; /* Bordes más claros que el fondo de la tabla */
+    border: 1px solid #444;
 }
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+td:first-child {text-align: left;width: 5px;}
 
 th {
-    background-color: #333; /* Un gris oscuro para el fondo del encabezado */
-    color: #4CAF50; /* Usar el verde para el texto del encabezado */
+    background-color: #333; /* Mantenemos el gris oscuro para el fondo del encabezado */
+    color: #4CAF50; /* Texto del encabezado en verde */
+    padding: 5px 5px;
+    word-wrap: break-word; /* Permite la división de palabras para ajustar el texto dentro de la celda */
+    text-align: center; /* Centramos el contenido */
 }
-
-td {
-    color: #ddd; /* Gris claro para el texto de las celdas */
+/* Establecer el ancho de las columnas a partir de la segunda */
+th:not(:first-child), td:not(:first-child) {
+    width: 5px; /* Ejemplo de ancho fijo, ajusta según necesidad */
 }
 
 tr:nth-child(even) {
-    background-color: #222; /* Alternar colores para las filas */
+    background-color: #333;
 }
 
-/* Estilos para el encabezado de la tabla */
-th {
-    padding: 10px 15px;
-    width: 10%; /* Ajustar el ancho de las columnas */
-    text-align: center; /* Centrar el contenido de los encabezados */
-}
-
-/* Estilos para las celdas de la tabla */
-td {
-    padding: 8px;
-    text-align: center; /* Centrar el contenido de las celdas */
-}
-
-/* Estilos para hacer que las tablas sean responsivas */
 @media screen and (max-width: 600px) {
     table {
         display: block;
@@ -63,7 +59,6 @@ td {
     }
 }
 
-/* Añadir un salto de línea después del primer espacio en los nombres de las columnas */
 th::after {
     content: "\A";
     white-space: pre;
